@@ -1,0 +1,5 @@
+Credentials cache: API:29572
+       Principal: xamartin@LE-101.FR
+
+  Issued                Expires               Principal
+Sep  5 12:22:58 2017  Sep 12 12:22:29 2017  krbtgt/LE-101.FR@LE-101.FR
