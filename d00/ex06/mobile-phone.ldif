@@ -1,4 +1,4 @@
-dn: uid=xamartin, ou=2017_paris,ou=2017,ou=paris,ou=people,dc=42,dc=fr
+dn: uid=xamartin,ou=piscine,ou=people,dc=le-101,dc=fr
 changetype: modify
-modify: mobile
+replace: mobile
 mobile: 0605119466
