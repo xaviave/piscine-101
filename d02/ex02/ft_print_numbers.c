@@ -1,20 +1,22 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/08 08:24:21 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/08 13:19:46 by xamartin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar(char c)
+void		ft_putchar(char c);
+
+void		ft_print_numbers(void)
 {
-    write(1, &c, 1);
-}
+	char	a;
 
-void ft_print_numbers(void)
-{
-    char a;
-
-    a = 48;
-    while(a < 58)
-        ft_putchar(a++);
-}
-
-int main()
-{
-    ft_print_numbers();
+	a = 48;
+	while (a < 58)
+		ft_putchar(a++);
 }

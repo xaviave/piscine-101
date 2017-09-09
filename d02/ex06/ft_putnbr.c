@@ -1,31 +1,32 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/08 08:26:25 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/08 14:51:49 by xamartin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar(char c)
+void		ft_putchar(char c);
+
+void		ft_putnbr(int nb)
 {
-    write(1, &c, 1);
-}
+	long	n;
 
-void ft_putnbr(int nb)
-{
-    long n;
-
-    n = nb;
-    if (n < 0)
-    {
-        ft_putchar('-');
-        n = -n;
-    }
-    if (n > 9)
-    {
-        ft_putnbr(nb / 10);
-        ft_putnbr(nb % 10);
-    }
-    else
-        ft_putchar(nb + 48);
-    
-}
-
-int main()
-{
-    ft_putnbr(2147483647);
+	n = nb;
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + 48);
 }
