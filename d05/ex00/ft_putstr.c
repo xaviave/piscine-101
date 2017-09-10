@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/09 13:28:50 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/10 14:05:27 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/08 15:13:47 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/08 15:14:21 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_words_tables(char **tab)
+void	ft_putstr(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (tab[i][j])
-		{
-			ft_putchar(tab[i][j]);
-			j++;
-		}
-		i++;
-		j = 0;
-		ft_putchar('\n');
-	}
+	while (str[i] != '\0')
+		ft_putchar(str[i++]);
 }

@@ -1,33 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/09 13:28:50 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/10 14:05:27 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/10 19:31:44 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/10 19:31:55 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
 
-void	ft_print_words_tables(char **tab)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (tab[i][j])
-		{
-			ft_putchar(tab[i][j]);
-			j++;
-		}
-		i++;
-		j = 0;
-		ft_putchar('\n');
-	}
-}

@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/09 13:28:50 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/10 14:05:27 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/08 08:26:25 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/08 14:51:49 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+void		ft_putchar(char c);
 
-void	ft_print_words_tables(char **tab)
+void		ft_putnbr(int nb)
 {
-	int i;
-	int j;
+	long	n;
 
-	i = 0;
-	while (tab[i])
+	n = nb;
+	if (n < 0)
 	{
-		j = 0;
-		while (tab[i][j])
-		{
-			ft_putchar(tab[i][j]);
-			j++;
-		}
-		i++;
-		j = 0;
-		ft_putchar('\n');
+		ft_putchar('-');
+		n = -n;
 	}
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + 48);
 }

@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/09 13:28:50 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/10 14:05:27 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/08 15:17:21 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/08 15:18:40 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_words_tables(char **tab)
+int			ft_atoi(char *str)
 {
-	int i;
-	int j;
+	int		i;
+	char	n;
+	int		out;
 
 	i = 0;
-	while (tab[i])
-	{
-		j = 0;
-		while (tab[i][j])
-		{
-			ft_putchar(tab[i][j]);
-			j++;
-		}
+	out = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-		j = 0;
-		ft_putchar('\n');
+	if (str[i] == '-' || str[i] == '+')
+	{
+		n = str[i];
+		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		out = out * 10 + str[i] - '0';
+		i++;
+	}
+	if (n == '-')
+		out = -out;
+	return (out);
 }
