@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonnaci.c                                     :+:      :+:    :+:   */
+/*   ft_opp.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/08 15:53:08 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/08 15:53:41 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/14 21:41:16 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/15 22:24:23 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+#ifndef _FT_OPP_H
+# define _FT_OPP_H
+
+t_opp	g_opptab[] =
 {
-	if (index == 0)
-		return (0);
-	if (index < 0)
-		return (-1);
-	if (index == 1 || index == 2)
-		return (1);
-	else
-		return ((ft_fibonacci(index - 2)) + (ft_fibonacci(index - 1)));
-}
+	{"+", &ft_add},
+	{"-", &ft_sub},
+	{"*", &ft_mul},
+	{"/", &ft_div},
+	{"%", &ft_mod},
+	{"", &ft_usage}
+};
+
+#endif

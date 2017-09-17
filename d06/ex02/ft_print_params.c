@@ -6,16 +6,11 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 17:46:16 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/08 18:10:04 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/13 17:51:06 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_aff(char *str)
 {
@@ -33,7 +28,7 @@ int		main(int ac, char *ag[])
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (i < ac)
 	{
 		ft_aff(ag[i]);

@@ -6,15 +6,15 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/09 13:19:40 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/10 19:27:01 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/13 19:46:10 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int  ft_count_words(char *str)
+int			ft_count_words(char *str)
 {
-	int  i;
+	int		i;
 
 	i = 0;
 	while (*str)
@@ -31,11 +31,11 @@ int  ft_count_words(char *str)
 	return (i);
 }
 
-char *ft_strdup(char *str)
+char		*ft_strdup(char *str)
 {
-	char *word;
-	int  len;
-	int  i;
+	char	*word;
+	int		len;
+	int		i;
 
 	len = 0;
 	while (str[len] && str[len] != '\t' && str[len] != ' ' && str[len] != '\n')
@@ -49,11 +49,11 @@ char *ft_strdup(char *str)
 	return (word);
 }
 
-char **ft_split_whitespaces(char *str)
+char		**ft_split_whitespaces(char *str)
 {
-	char **res;
-	int  i;
-	int  j;
+	char	**res;
+	int		i;
+	int		j;
 
 	i = ft_count_words(str);
 	if (!(res = (char **)malloc(sizeof(char *) * (i + 1))))

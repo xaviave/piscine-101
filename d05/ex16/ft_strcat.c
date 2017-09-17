@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 18:35:12 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/08 16:39:52 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/13 13:48:30 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ char	*ft_strcat(char *dest, char *src)
 		j++;
 	while (src[i] != '\0')
 	{
-		dest[j] = src[i + j];
+		dest[j] = src[i];
 		i++;
+		j++;
 	}
-	dest[i + j] = '\0';
+	dest[j] = '\0';
 	return (dest);
 }
