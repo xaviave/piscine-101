@@ -6,39 +6,35 @@
 #    By: xamartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/16 20:17:04 by xamartin          #+#    #+#              #
-#    Updated: 2017/09/16 20:17:08 by xamartin         ###   ########.fr        #
+#    Updated: 2017/09/20 16:35:14 by xamartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all, clean, fclean, re
+NAME=libft.a
 
-NAME = libft.a
+SRCS_DIR=./srcs
 
-SRCS_DIR = ./srcs
+RAW_SRCS=\
+		 ft_putchar.c\
+		 ft_swap.c\
+		 ft_strcmp.c\
+		 ft_strlen.c\
+		 ft_putstr.c
 
-RAW_SRCS =\
-		  ft_putchar.c\
-		  ft_swap.c\
-		  ft_strcmp.c\
-		  ft_strlen.c\
-		  ft_putstr.c
+OBJ=\
+	ft_putchar.o\
+	ft_swap.o\
+	ft_strcmp.o\
+	ft_strlen.o\
+	ft_putstr.o
 
-OBJ = $(RAW_SRCS:.c=.o)
+SRCS=$(addprefix $(SRCS_DIR)/,$(RAW_SRCS))
 
-SRCS = $(addprefix $(SRCS_DIR)/,$(RAW_SRCS))
-
-CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
-AR = ar rc
+$(NAME):
+	gcc -c -Wall -Wextra -Werror $(SRCS)
+	ar rc $(NAME) $(OBJ)
 
 all: $(NAME)
-
-$(NAME): $(OBJ)
-	@$(CC) $(OBJ) -o $(NAME)
-	@$(AR) $(OBJ)
-
-$(OBJ):
-	@$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
 	@rm -f $(OBJ)
@@ -47,4 +43,3 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
-

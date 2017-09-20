@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 15:53:54 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/08 15:55:11 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/19 19:24:24 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@ int		ft_sqrt(int nb)
 		return (i);
 	else
 		return (0);
+}
+
+int main()
+{
+	printf("%d", ft_sqrt(128361732));
 }

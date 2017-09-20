@@ -6,13 +6,13 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 16:04:59 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/14 18:43:39 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/18 22:20:09 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_star(char *str)
+int			ft_star(char *str)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -24,9 +24,9 @@ int	ft_star(char *str)
 	return (0);
 }
 
-int match(char *s1, char *s2)
+int			match(char *s1, char *s2)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	if (s1[i] == '\0' && s2[i] == '\0')
@@ -39,9 +39,4 @@ int match(char *s1, char *s2)
 		return (match(s1 + 1, s2) || match(s1 + 1, s2 + 1));
 	else
 		return (0);
-}
-
-int main(int ac, char *ag[])
-{
-	printf("%d", match(ag[1], ag[2]));
 }

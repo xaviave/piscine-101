@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/11 21:40:11 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/15 20:58:24 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/19 19:04:04 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char				*ft_strdupi(char *str)
 	char			*tab;
 
 	i = ft_strlen(str);
-	if (!(tab = (char *)malloc(sizeof(tab) * (i + 1))))
+	if (!(tab = (char *)malloc(sizeof(char *) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while (str[i])
@@ -44,10 +44,8 @@ struct s_stock_par	*ft_param_to_tab(int ac, char **av)
 	int				i;
 	int				j;
 	t_stock_par		*s_tab;
-	char			*tab;
 
 	i = 0;
-	j = 0;
 	if (!(s_tab = (t_stock_par*)malloc(sizeof(t_stock_par) * (ac + 1))))
 		return (NULL);
 	while (i < ac)

@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calcul.c                                           :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 21:44:24 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/18 16:39:55 by xamartin         ###   ########.fr       */
+/*   Created: 2017/09/20 11:59:55 by xamartin          #+#    #+#             */
+/*   Updated: 2017/09/20 12:00:32 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#ifndef _FT_LIST_H
+# define _FT_LIST_H
 
-int		ft_add(int a, int b)
+typedef struct		s_list
 {
-	return (a + b);
-}
+	struct			s_list *next;
+	void			*data;
+}					t_list;
 
-int		ft_sub(int a, int b)
-{
-	return (a - b);
-}
-
-int		ft_mul(int a, int b)
-{
-	return (a * b);
-}
-
-int		ft_div(int a, int b)
-{
-	return (a / b);
-}
-
-int		ft_mod(int a, int b)
-{
-	return (a % b);
-}
+#endif

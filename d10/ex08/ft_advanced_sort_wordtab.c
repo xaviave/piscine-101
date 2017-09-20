@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/16 11:55:57 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 20:30:17 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/18 17:07:08 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void		ft_advanced_sort_wordtab(char **tab, int (*cmp)(char *, char *))
 	char	*a;
 
 	i = 0;
-	while (tab[i])
+	while (tab[i + 1] != 0)
 	{
-		if (tab[i] != 0 && cmp(tab[i], tab[i + 1]) > 0)
+		if (cmp(tab[i], tab[i + 1]) > 0)
 		{
 			a = tab[i];
 			tab[i] = tab[i + 1];

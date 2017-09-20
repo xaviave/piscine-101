@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 11:27:56 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 14:06:36 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/19 18:35:03 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void		ft_print_word_tables(char **str)
 			ft_putchar(str[i][j]);
 			j++;
 		}
+		ft_putchar('\n');
 		i++;
 	}
 }
@@ -63,7 +64,7 @@ void		ft_show_tab(struct s_stock_par *par)
 {
 	while (par && par->str)
 	{
-		ft_putstr(par->str);
+		ft_putstr(par->copy);
 		ft_putchar('\n');
 		ft_putnbr(par->size_param);
 		ft_putchar('\n');

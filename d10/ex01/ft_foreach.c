@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 21:55:59 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 20:23:35 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/18 16:58:08 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ void		ft_foreach(int *tab, int length, void (*f)(int))
 	int		i;
 
 	i = 0;
-	while (i < lenght)
+	while (i < length)
 		(*f)(tab[i++]);
 }

@@ -6,13 +6,13 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 21:52:23 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 15:35:33 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/18 16:42:54 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int			ft_usage(long a, long b)
+int			ft_usage(int a, int b)
 {
 	(void)a;
 	(void)b;

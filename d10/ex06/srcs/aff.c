@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 13:06:49 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 20:45:46 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/19 17:09:07 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		ft_putchar(char c)
 
 int			ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0')
@@ -31,11 +31,11 @@ int			ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-long		ft_atoi(char *str)
+int			ft_atoi(char *str)
 {
 	int		i;
 	int		n;
-	long	out;
+	int		out;
 
 	out = 0;
 	i = 0;
@@ -56,21 +56,21 @@ long		ft_atoi(char *str)
 	return (out);
 }
 
-void		ft_putnbr(long nb)
+void		ft_putnbr(int nb)
 {
-	long n;
+	long	n;
 
 	n = nb;
-	if (nb < 0)
+	if (n < 0)
 	{
 		ft_putchar('-');
-		nb = -nb;
+		n = -n;
 	}
-	if (nb >= 10)
+	if (n >= 10)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
 	else
-		ft_putchar(nb + 48);
+		ft_putchar(n + 48);
 }

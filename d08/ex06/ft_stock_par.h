@@ -6,7 +6,7 @@
 /*   By: xamartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 11:24:27 by xamartin          #+#    #+#             */
-/*   Updated: 2017/09/16 14:04:59 by xamartin         ###   ########.fr       */
+/*   Updated: 2017/09/19 18:25:35 by xamartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct		s_stock_par
 	char	**tab;
 }					t_stock_par;
 
-char				**ft_split_whitespaces(char *av);
+char				**ft_split_whitespaces(char *str);
 void				ft_putchar(char c);
 
 #endif
